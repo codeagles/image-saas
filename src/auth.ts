@@ -6,8 +6,6 @@ import {accounts, users} from "@/server/db/schema";
 import {eq} from "drizzle-orm";
 import {AdapterAccountType} from "next-auth/adapters";
 
-
-
 export const { handlers, signIn, signOut, auth } = NextAuth({
     adapter: DrizzleAdapter(db),
     providers: [GitLab],
